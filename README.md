@@ -11,6 +11,22 @@ To store and delete files and also folder on cloud server likes Amazon S3 , Digi
 
 ## Installation and Configuration
 
+Add repository to composer.json
+
+        "repositories": [
+            {
+            "type": "vcs",
+            "url": "https://github.com/kusmaniraj/filesystem.git"
+            }
+        ]
+Add script to composer.json
+
+        "scripts": {
+              "post-package-install": [
+                   "cp -a vendor/logisticmall/filesystem/config/filesystems.php config/filesystems.php"
+              ]
+        }
+
 Command to install package.
 
     composer require logisticmall/filesystem
@@ -21,17 +37,6 @@ Register the FileSystemServiceProvider in bootstrap >> app.php.
 
 Add config/filesystems.php through on adding script in composer.json or vendor:publish command line.
 
-- On adding script in composer.json
-
-      "scripts": {
-              "post-package-install": [
-                   "cp -a vendor/logisticmall/filesystem/config/filesystems.php config/filesystems.php"
-              ]
-      }
-
-- Or on using command line
-
-      php artisan vendor:publish --provider="LogisticMall\FileSystem\FileSystemServiceProvider"
 
 ## Project Dependencies
 

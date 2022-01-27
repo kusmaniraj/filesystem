@@ -1,0 +1,21 @@
+{
+    "name": "logisticmall/filesystem",
+    "description": "To store and delete files and images on cloud like  AWS s3",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "LogisticMall\\FileSystem\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Peogtec",
+            "email": "info@pegotec.net"
+        }
+    ],
+    "require": {
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "intervention/image": "^2.7"
+    }
+}
